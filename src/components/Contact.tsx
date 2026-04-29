@@ -6,6 +6,12 @@ import { ShinyButton } from './ui/shiny-button';
 export const Contact = () => {
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [phone, setPhone] = useState("");
+
+  const handlePhoneChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const value = e.target.value.replace(/\D/g, ""); // Keep only digits
+    setPhone(value);
+  };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -170,7 +176,9 @@ export const Contact = () => {
                             <input 
                               required
                               type="tel" 
-                              placeholder="017XX-XXXXXX"
+                              value={phone}
+                              onChange={handlePhoneChange}
+                              placeholder="017XXXXXXXX"
                               className="w-full bg-white/5 border border-white/10 rounded-2xl px-12 py-5 outline-none focus:border-primary/50 focus:bg-white/10 transition-all duration-300 placeholder:text-white/20"
                             />
                             <Phone size={16} className="absolute left-5 top-1/2 -translate-y-1/2 text-white/20 group-focus-within:text-primary transition-colors" />
