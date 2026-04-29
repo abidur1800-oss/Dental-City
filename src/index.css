@@ -211,6 +211,11 @@
 
 :root {
   color-scheme: dark;
+  scroll-behavior: smooth;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {

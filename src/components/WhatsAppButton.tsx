@@ -19,11 +19,11 @@ export const WhatsAppButton = () => {
         initial={{ opacity: 0, x: 20 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ delay: 2, duration: 0.5 }}
-        className="mb-2 px-4 py-2 bg-white text-dark text-sm font-bold rounded-xl shadow-xl border-l-4 border-[#25D366] relative"
+        className="mb-2 px-3 md:px-4 py-1.5 md:py-2 bg-white text-dark text-[10px] md:text-sm font-bold rounded-xl shadow-xl border-l-4 border-[#25D366] relative whitespace-nowrap"
       >
         Need help? Chat with us
         {/* Triangle pointer */}
-        <div className="absolute -bottom-1.5 right-4 w-3 h-3 bg-white rotate-45" />
+        <div className="absolute -bottom-1.5 right-3 md:right-4 w-3 h-3 bg-white rotate-45" />
       </motion.div>
 
       {/* WhatsApp Link */}

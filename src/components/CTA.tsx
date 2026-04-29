@@ -28,7 +28,7 @@ export const CTA = () => {
           </div>
 
           <div className="relative z-10 flex flex-col sm:flex-row gap-6 shrink-0">
-            <ShinyButton className="flex items-center justify-center shadow-2xl">
+            <ShinyButton href="#contact" className="flex items-center justify-center shadow-2xl">
               <div className="flex items-center space-x-3">
                 <Calendar size={20} />
                 <span>Book Appointment</span>

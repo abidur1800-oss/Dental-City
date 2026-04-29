@@ -7,11 +7,19 @@ export const Footer = () => {
       <div className="container mx-auto px-4 md:px-6">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
           <div className="space-y-6">
-            <div className="flex items-center space-x-2">
-              <div className="w-8 h-8 rounded-lg bg-primary flex items-center justify-center">
-                <span className="text-dark font-display font-bold text-lg">D</span>
+            <div className="flex items-center space-x-3">
+              <div className="w-10 h-10 rounded-lg overflow-hidden">
+                <img 
+                  src="https://lh3.googleusercontent.com/d/10leDvijlOOZhM26yP-oKNNfr450C8l7x" 
+                  alt="Dental City Logo" 
+                  className="w-full h-full object-contain"
+                  referrerPolicy="no-referrer"
+                />
               </div>
-              <span className="text-xl font-display font-bold text-white">DENTAL CITY</span>
+              <div className="flex flex-col">
+                <span className="text-xl font-display font-bold text-white leading-none">DENTAL CITY</span>
+                <span className="text-[8px] uppercase tracking-widest text-primary font-bold">Orthodontics</span>
+              </div>
             </div>
             <p className="text-white/50 text-sm leading-relaxed">
               Dhaka's premier destination for luxury dental care. 
@@ -19,9 +27,9 @@ export const Footer = () => {
               offered in a state-of-the-art environment.
             </p>
             <div className="flex items-center space-x-4">
-              <SocialLink Icon={Facebook} />
-              <SocialLink Icon={Instagram} />
-              <SocialLink Icon={Twitter} />
+              <SocialLink Icon={Facebook} href="https://www.facebook.com/DCOrthodontics/" />
+              <SocialLink Icon={Instagram} href="#" />
+              <SocialLink Icon={Twitter} href="#" />
             </div>
           </div>
 
@@ -80,8 +88,13 @@ export const Footer = () => {
   );
 };
 
-const SocialLink = ({ Icon }: { Icon: any }) => (
-  <a href="#" className="w-10 h-10 rounded-xl glass flex items-center justify-center hover:bg-primary hover:text-dark transition-all hover:-translate-y-1">
+const SocialLink = ({ Icon, href }: { Icon: any, href: string }) => (
+  <a 
+    href={href} 
+    target="_blank" 
+    rel="noopener noreferrer" 
+    className="w-10 h-10 rounded-xl glass flex items-center justify-center hover:bg-primary hover:text-dark transition-all hover:-translate-y-1"
+  >
     <Icon size={18} />
   </a>
 );

@@ -33,13 +33,18 @@ export const Navbar = () => {
       )}
     >
       <div className="container mx-auto px-4 md:px-6 flex items-center justify-between">
-        <a href="#home" className="flex items-center space-x-2 group">
-          <div className="w-10 h-10 rounded-lg bg-primary flex items-center justify-center border-glow group-hover:scale-110 transition-transform duration-300">
-            <span className="text-dark font-display font-bold text-xl">D</span>
+        <a href="#home" className="flex items-center space-x-3 group">
+          <div className="relative w-10 h-10 md:w-12 md:h-12 overflow-hidden rounded-lg group-hover:scale-105 transition-transform duration-300">
+            <img 
+              src="https://lh3.googleusercontent.com/d/10leDvijlOOZhM26yP-oKNNfr450C8l7x" 
+              alt="Dental City Logo" 
+              className="w-full h-full object-contain"
+              referrerPolicy="no-referrer"
+            />
           </div>
           <div className="flex flex-col">
-            <span className="text-xl font-display font-bold tracking-tight text-white group-hover:text-primary transition-colors">DENTAL CITY</span>
-            <span className="text-[10px] uppercase tracking-[0.2em] text-primary/80 font-medium -mt-1">Dhaka, Bangladesh</span>
+            <span className="text-lg md:text-xl font-display font-bold tracking-tight text-white group-hover:text-primary transition-colors leading-none mb-1">DENTAL CITY</span>
+            <span className="text-[8px] md:text-[10px] uppercase tracking-[0.2em] text-primary/80 font-medium whitespace-nowrap">& ORTHODONTICS</span>
           </div>
         </a>
 
